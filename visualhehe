@@ -1,5 +1,16 @@
-local blackScreen = Instance.new("Frame")
-blackScreen.Size = UDim2.new(1, 0, 1, 0)
-blackScreen.Position = UDim2.new(0, 0, 0, 0)
-blackScreen.BackgroundColor3 = Color3.new(0, 0, 0)
-blackScreen.Parent = game.Players.LocalPlayer.PlayerGui
+-- Criar um frame que ocupa toda a tela
+local blackFrame = Instance.new("Frame")
+blackFrame.Name = "BlackFrame"
+blackFrame.Parent = blackScreenGui
+blackFrame.BackgroundColor3 = Color3.new(0, 0, 0) -- Cor preta
+blackFrame.Size = UDim2.new(1, 0, 1, 0) -- Tamanho da tela inteira
+blackFrame.Position = UDim2.new(0, 0, 0, 0) -- Posição inicial no canto superior esquerdo
+
+-- Função para deixar a tela preta
+function makeScreenBlack()
+    blackScreenGui.Enabled = true
+end
+
+-- Chamando a função para deixar a tela preta (pode ser chamada em algum evento do jogo)
+makeScreenBlack()
+
